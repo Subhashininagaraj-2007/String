@@ -1,0 +1,22 @@
+class Solution {
+    int missingNum(int arr[]) {
+        Arrays.sort(arr);
+           int l = 0, h = arr.length - 1;
+        int mid;
+
+        while (l <= h) 
+        {
+            mid = l + (h - l) / 2;
+
+            if (arr[mid] == mid + 1)
+            {
+                l = mid + 1;
+            }
+            else
+            {
+                h = mid - 1;
+            }
+        }
+        return l + 1;
+    }
+}
