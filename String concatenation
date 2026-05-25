@@ -1,0 +1,10 @@
+class Solution {
+    public static String concatenateStrings(ArrayList<String> arr) {
+        StringBuilder ans=new StringBuilder();
+        for(String i:arr)
+        {
+            ans.append(i);
+        }
+        return ans.toString();
+    }
+}
